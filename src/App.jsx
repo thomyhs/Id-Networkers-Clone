@@ -2,11 +2,22 @@ import { useState } from "react"
 
 function App() {
     return (
-      <div style={{fontFamily: "Roboto"}}>
+      <div style={{fontFamily: "Roboto"}} className="relative">
       
         <Navbar/>
         <div className="bg-[#F3F5F8] rounded-b-3xl pt-[190px]">
           <Section/>
+          <div className="fixed flex flex-col gap-4 right-6 bottom-9 items-center z-[999]">
+            <div className="bg-[#CFD0D3] hover:bg-[#F1B6C7] p-3 py-5 rounded-full cursor-pointer">
+              <img src="src/assets/tdots.svg" className="hover:bg-[#F1B6C7]" alt="" />
+            </div>
+            
+            <button className="bg-[#EB2455] p-3 rounded-full hover:animate-pulse">
+              <div className="bg-[#EB2455] p-1">
+                <img src="src/assets/bchat.svg" className="w-[30px] animate-none" fill="#FFFFFF" />
+              </div>
+            </button>
+          </div>
         </div>
         <SecondSection/>
         <Footer/>
